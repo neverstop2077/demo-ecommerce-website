@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Đặt hàng</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+  <style>
+      body{
+        font-family: 'Montserrat', sans-serif;
+      }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.93);
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }   
+
+    .navbar-nav li:hover{
+      animation-name: bigger;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes bigger {
+      0%{
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(1.1);
+      }
+    }
+
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+
+  .item{
+      width: 100%;height: auto;
+  }
+
+  .card-img-top{
+      width: 250px;height: 250px;
+      margin: 15px 0; 
+  }
+  
+  .card-img-top:hover{
+      animation-name: bigger;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+  }
+
+  .card-text{
+      font-weight: bold;
+  }
+
+  .card-product a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .btn-default:hover{
+    animation-name: clickbtn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes clickbtn {
+    0%{
+      background: white;
+      color: black;
+    }
+    100%{
+      background: black;
+      color: white;
+    }
+  }
+  
+  footer{
+    background: rgba(0, 0, 0, 0.93);
+    color: gainsboro;
+  }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="trangchu.html"><span class="glyphicon glyphicon-tower"></span>  TowerShop</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li><a href="hoidap.html">Hỏi và đáp</a></li>
+        <li><a href="aboutus.html">Về chúng tôi</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="muahang.html"><span class="glyphicon glyphicon-check"></span> Mua hàng</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+    <h3 class="text-center">TIẾN HÀNH ĐẶT HÀNG</h3><br>
+    <form class="form-horizontal" action="muahang.php" method="post">
+        <fieldset class="scheduler-border">
+          <legend class="scheduler-border">Chọn sản phẩm</legend>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Chọn</th>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Giá thành</th>
+                <th>Số lượng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <div class="form-group text-center">
+                  <tr>
+                    <td><input type="checkbox" value="BIG CHEESE 8" name="item1" id="item1"></td>
+                    <td><label for="item1">BIG "CHEESE" 8</label></td>
+                    <td><img src="cheese1.jpg" alt="item1" style="width: 100px;height: auto;"></td>
+                    <td>320,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item1_num" id="item1_num" onclick="count();"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value="Music Love Peace TEE" name="item2" id="item2"></td>
+                    <td><label for="item2">'Music Love Peace' TEE</label></td>
+                    <td><img src="ms1.jpg" alt="tee" style="width: 100px;height: auto;"></td>
+                    <td>200,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item2_num" id="item2_num" onclick="count();"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value="ULTRAMANIA Longsleeve Tee" name="item3" id="item3"></td>
+                    <td><label for="item3">ULTRAMANIA Longsleeve TEE</label></td>
+                    <td><img src="s1.jpg" alt="tee" style="width: 100px;height: auto;"></td>
+                    <td>280,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item3_num" id="item3_num" onclick="count();"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value="MYO Barbeb Wire TEE" name="item4" id="item4"></td>
+                    <td><label for="item4">MYO Barbeb Wire TEE</label></td>
+                    <td><img src="b1.jpg" alt="tee" style="width: 100px;height: auto;"></td>
+                    <td>525,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item4_num" id="item4_num" onclick="count();"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value="PLAID PANTS - RED" name="item5" id="item5"></td>
+                    <td><label for="item5">PLAID PANTS - RED</label></td>
+                    <td><img src="r1.jpg" alt="tee" style="width: 100px;height: auto;"></td>
+                    <td>360,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item5_num" id="item5_num" onclick="count();"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value="JOGGER PANTS - GREY" name="item6" id="item6"></td>
+                    <td><label for="item6">JOGGER PANTS - GREY</label></td>
+                    <td><img src="g1.jpg" alt="tee" style="width: 100px;height: auto;"></td>
+                    <td>420,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item6_num" id="item6_num" onclick="count();"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value="Quần Tây Slim-Fit" name="item7" id="item7"></td>
+                    <td><label for="item7">Quần Tây Slim-Fit</label></td>
+                    <td><img src="f1.jpg" alt="tee" style="width: 100px;height: auto;"></td>
+                    <td>414,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item7_num" id="item7_num" onclick="count();"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value="SIDE STRIPE PANTS - WHITE" name="item8" id="item8"></td>
+                    <td><label for="item8">SIDE STRIPE PANTS - WHITE</label></td>
+                    <td><img src="w1.jpg" alt="tee" style="width: 100px;height: auto;"></td>
+                    <td>360,000 ₫</td>
+                    <td><input type="number" value="0" min="0" max="100" name="item8_num" id="item8_num" onclick="count();"></td>
+                  </tr>
+                  <tr class="text-center"> 
+                    <td colspan="3" style="text-transform: uppercase; font-size: 20px;">Tổng tiền:</td>
+                    <td><p id="count">0 ₫</p></td>
+                    <td></td>
+                  </tr>
+                </div>
+            </tbody>
+          </table>
+        </fieldset>
+        <br><br>
+        <fieldset class="scheduler-border">
+          <legend class="scheduler-border">Nhập thông tin khách hàng</legend>
+          <div class="form-group">
+            <label for="hotenkh" class="control-label col-sm-4">Họ tên khách hàng:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="hotenkh" name="hotenkh" placeholder="Nhập họ tên" required>
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="email" class="control-label col-sm-4">Email khách hàng:</label>
+              <div class="col-sm-6">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" required>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="sodienthoai" class="control-label col-sm-4">Số điện thoại khách hàng:</label>
+              <div class="col-sm-6">
+                  <input type="text" class="form-control" id="sodienthoai" name="sodienthoai" placeholder="Nhập số điện thoại" required>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="nghenghiep" class="control-label col-sm-4">Nghề nghiệp khách hàng:</label>
+              <div class="col-sm-6">
+                  <input type="text" class="form-control" id="nghenghiep" name="nghenghiep" placeholder="Nhập nghề nghiệp" required>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="diachi" class="control-label col-sm-4">Địa chỉ khách hàng:</label>
+              <div class="col-sm-6">
+                  <input type="text" class="form-control" id="diachi" name="diachi" placeholder="Nhập địa chỉ" required>
+              </div>
+          </div>
+        </fieldset>
+        <br><br>
+        <input type="submit" class="btn btn-md btn-default" style="display: block;margin:auto;" value="Xác nhận đặt hàng">
+    </form>
+</div>
+
+<br><br>
+<footer class="container-fluid text-center">
+  <div class="row">
+    <div class="col-md-4 col-12">
+      <h4>100% HÀNG CHÍNH HÃNG</h4>
+      <p>CAM KẾT CHÍNH HIỆU</p>
+    </div>
+    <div class="col-md-4 col-12">
+      <h4>100+ MẪU MÃ THỜI TRANG</h4>
+      <p>TẠI TOWERSHOP</p>
+    </div>
+    <div class="col-md-4 col-12">
+      <h4>TIN TỨC THỜI TRANG</h4>
+      <p>CẬP NHẬT MỖI NGÀY</p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12 col-12">
+      <p>Copyright 2021 © CÔNG TY TNHH TOWER</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function count(){
+    myform = document.forms[0];
+    let count = 0;
+    let item =      [myform.elements['item1'],
+                     myform.elements['item2'],
+                     myform.elements['item3'],
+                     myform.elements['item4'],
+                     myform.elements['item5'],
+                     myform.elements['item6'],
+                     myform.elements['item7'],
+                     myform.elements['item8']];
+    let num_count = [myform.elements['item1_num'].value,
+                     myform.elements['item2_num'].value,
+                     myform.elements['item3_num'].value,
+                     myform.elements['item4_num'].value,
+                     myform.elements['item5_num'].value,
+                     myform.elements['item6_num'].value,
+                     myform.elements['item7_num'].value,
+                     myform.elements['item8_num'].value];
+    let price = [320000,200000,280000,525000,360000,420000,414000,360000];
+    for(let i=0; i<num_count.length; i++){
+      if(item[i].checked){
+        count += parseInt(num_count[i]) * price[i];
+      }
+    }
+    document.getElementById("count").innerHTML = count.toLocaleString('vi', {style : 'currency', currency : 'VND'});
+  }
+</script>
+
+</body>
+</html>

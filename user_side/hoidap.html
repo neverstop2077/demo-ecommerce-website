@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hỏi đáp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+  <style>
+      body{
+        font-family: 'Montserrat', sans-serif;
+      }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.93);
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .navbar-nav li:hover{
+      animation-name: bigger;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes bigger {
+      0%{
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(1.1);
+      }
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+
+  .item{
+      width: 100%;height: auto;
+  }
+
+  .card-img-top{
+      width: 250px;height: 250px;
+  }
+
+  .card-text{
+      font-weight: bold;
+  }
+
+  footer{
+    background: rgba(0, 0, 0, 0.93);
+    color: gainsboro;
+  }
+  #content h4{
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="trangchu.html"><span class="glyphicon glyphicon-tower"></span>  TowerShop</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li class="active"><a href="hoidap.html">Hỏi và đáp</a></li>
+        <li><a href="aboutus.html">Về chúng tôi</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="muahang.html"><span class="glyphicon glyphicon-check"></span> Mua hàng</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="wall1.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>Sự đơn giản</h3>
+          <p>Tower tinh chỉnh nhằm tối ưu hóa sự đơn giản nhưng vẫn
+              đảm bảo chất lượng của sản phẩm.
+          </p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="wall2.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>Thiết kế</h3>
+          <p>Sản phẩm từ Tower mang trong mình đa dạng các kiểu mẫu 
+              cùng thiết kế phá cách, toát lên nét đặc trưng, cá tính.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="wall3.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>Hãy tin tưởng ở sản phẩm của chúng tôi!</h3>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">
+  <h3>HỎI VÀ ĐÁP</h3><br>
+  <div class="row">
+    <div id="content" class="col-md-12" style="text-align: left;line-height: 2;">
+      <h4>Chính sách vận chuyển của Tower</h4>
+      <p>Tower bao gồm các sản phẩm thời trang streetwear đến từ các thương hiệu Hàn Quốc và Việt Nam.</p>
+      <p>Các chính sách giao hàng nhanh / chờ hàng, giao hàng trong nước / ngoài nước tùy thuộc vào sản phẩm và chính sách của nhà sản xuất.</p>
+      <p>Lịch giao hàng cụ thể từng ngày như sau:</p>
+      <p>– Các ngày trong tuần: Hầu hết các đơn đặt hàng (được xác nhận vào buổi sáng) sẽ được giao trong ngày làm việc tiếp theo, và các đơn đặt hàng buổi chiều sẽ được giao trong 2 ngày làm việc tiếp theo.</p>
+      <p>– Thứ bảy: Hầu hết không giao hàng trong ngày thứ 7 và việc giao hàng còn phụ thuộc vào nhà sản xuất (của thương hiệu).</p>
+      <p>– Chủ nhật và ngày lễ: Các đơn hàng sẽ được chuyển đến đơn vị chuyển phát sau khi nhận được xác nhận trong ngày làm việc tiếp theo.</p>
+      <p>– Đơn hàng sẽ được tiến hàng giao vào ngày làm việc tiếp theo sau khi có xác nhận đơn hàng, một vài trường hợp khác có thể tùy thuộc vào đơn vị chuyển phát.</p>
+      <p>Về người giao hàng & hình thức giao hàng riêng lẻ:</p>
+      <p>– Đơn hàng của quý khách có thể sẽ được chia thành nhiều kiện hàng nhỏ nếu đơn hàng có từ 2 sản phẩm của các nhà sản xuất khác nhau.</p>
+      <h4>Tower có thể giao hàng ra nước ngoài không?</h4>
+      <p>Tower rất tiếc vì hiện tại vẫn chưa mở rộng chính sách giao hàng ra nước ngoài. Tower sẽ sớm thông báo đến quý khách khi chính sách giao hàng ra nước ngoài được áp dụng.</p>
+      <h4>Tôi có thể thay đổi địa điểm nhận hàng hay không?</h4>
+      <p>Trong trường hợp cần chỉnh sửa cho đơn hàng, quý khách có thể liên hệ với Tower CS qua số điện thoại: (+84) 666 666 666 và cung cấp thông tin chi tiết bao gồm:</p>
+      <p>- Mã số đơn hàng</p>
+      <p>- Tên sản phẩm/địa chỉ mới và nhu cầu cần chỉnh sửa</p>
+      <p>Quý khách hàng vui lòng chịu phí ship chênh lệch phát sinh do yêu cầu thay đổi địa điểm nhận hàng.</p>
+      <h4>Nếu quý khách liên tục mua cùng một sản phẩm sau khi đơn hàng bị hủy bỏ, Tower có thể hạn chế quyền truy cập sản phẩm của khách hàng</h4>
+      <p>Hành động treo đơn hàng vào trạng thái chờ vì mục đích bán lại hoặc vì các lý do khác để không tiếp tục mua hàng với cùng một sản phẩm có thể bị hạn chế mà không có cảnh báo trước và quý khách sẽ vĩnh viễn mất quyền truy cập vào TowerShop.</p>
+      <h4>Những lưu ý khi trả hàng và hoàn tiền</h4>
+      <p>Nếu quý khách muốn đổi sản phẩm sau khi đã nhận, xin quý khách vui lòng nộp đơn xin đổi trả và chuyển sản phẩm cần đổi trả đến đơn vị chịu trách nhiệm đổi trả trong thời gian là 7 ngày tính từ thời điểm nhận hàng.</p>
+      <p>Tower chỉ áp dụng chính sách đổi khi sản phẩm không vừa size, khác màu so với đơn đặt hàng và chính sách trả hàng cho các sản phẩm bị lỗi.</p>
+      <p>Tower không hỗ trợ chính sách đổi trả khi sản phẩm hoặc tặng phẩm đi kèm với sản phẩm (nếu có) có dấu hiệu đã qua sử dụng, hư hỏng, không đầy đủ nhãn mác và bao bì đóng gói. Đồ lót, vớ và các sản phẩm khác mà chất lượng sản phẩm dễ bị thay đổi vẫn không được Tower hỗ trợ chính sách đổi trả.</p>
+      <p>Nếu bạn không thông báo với Tower về việc đổi trả (không nhất thiết phải thông qua nhà cung cấp), rất có khả năng sản phẩm đổi trả sẽ bị thất lạc trong quá trình vận chuyển. Xin quý khách vui lòng gửi sản phẩm cần đổi trả sau khi nhận được thông báo chính thức từ Tower.</p>
+      <p>Không áp dụng với các sản phẩm trong chương trình giảm giá, khuyến mãi, miễn phí giao hàng.</p>
+      <h4>Làm sao để liên hệ với TowerShop?</h4>
+      <p>Bạn có thể gửi email cho chúng tôi qua hộp thư customer@towervn.com hoặc liên hệ qua số tổng đài 1900.666.666 từ 8 giờ sáng đến 6 giờ chiều.</p>
+    </div>
+  </div>
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  <div class="row">
+    <div class="col-md-4 col-12">
+      <h4>100% HÀNG CHÍNH HÃNG</h4>
+      <p>CAM KẾT CHÍNH HIỆU</p>
+    </div>
+    <div class="col-md-4 col-12">
+      <h4>100+ MẪU MÃ THỜI TRANG</h4>
+      <p>TẠI TOWERSHOP</p>
+    </div>
+    <div class="col-md-4 col-12">
+      <h4>TIN TỨC THỜI TRANG</h4>
+      <p>CẬP NHẬT MỖI NGÀY</p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12 col-12">
+      <p>Copyright 2021 © CÔNG TY TNHH TOWER</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
